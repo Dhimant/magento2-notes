@@ -5,7 +5,18 @@ $logger = new \Zend\Log\Logger();
 $logger->addWriter($writer);
 $logger->info('Your text message');
 ```
+# Change Default CronTab editor
 
+```
+export EDITOR=/bin/nano
+export VISUAL=nano
+
+export EDITOR=/usr/bin/vim
+export VISUAL=vim
+
+export EDITOR=/bin/vi
+export VISUAL=vi
+```
 
 # magento2-issues
 
