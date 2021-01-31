@@ -18,6 +18,12 @@ export VISUAL=vim
 export EDITOR=/bin/vi
 export VISUAL=vi
 ```
+# create a zip file in linux
+
+```
+zip -r myarchive.zip dir1 -x "dir1/ignoreDir1/*" "dir1/ignoreDir2/*"
+
+```
 
 # magento2-issues
 
