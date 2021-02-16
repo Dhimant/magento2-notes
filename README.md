@@ -25,6 +25,18 @@ zip -r myarchive.zip dir1 -x "dir1/ignoreDir1/*" "dir1/ignoreDir2/*"
 
 ```
 
+# Change customer password
+```
+select * from customer_entity where email = 'abcd@gmail.com'
+
+
+SET @email='abcd@gmail.com', @passwd='test@123', @salt=MD5(RAND());
+
+UPDATE customer_entity
+    SET password_hash = CONCAT(SHA2(CONCAT(@salt, @passwd), 256), ':', @salt, ':1')
+    WHERE email = @email;
+```
+
 # magento2-issues
 
 1. Not able to see custom category image in admin.
