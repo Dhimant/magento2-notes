@@ -37,6 +37,10 @@ UPDATE customer_entity
     WHERE email = @email;
 ```
 
+# n98-magerun2
+
+> https://github.com/netz98/n98-magerun2
+
 # magento2-issues
 
 1. Not able to see custom category image in admin.
