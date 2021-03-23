@@ -22,8 +22,15 @@ export VISUAL=vi
 
 ```
 zip -r myarchive.zip dir1 -x "dir1/ignoreDir1/*" "dir1/ignoreDir2/*"
+```
+
+
+# download file using curl
 
 ```
+curl https://www.example.com/media/store-4.xml --output store-4-orig.xml
+```
+
 
 # Change customer password
 ```
