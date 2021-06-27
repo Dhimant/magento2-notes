@@ -74,6 +74,20 @@ public function generateCallTrace()
 
 ```
 
+# Get recently modified files in folder linux
+
+```
+find . -type f -newermt "-24 hours" 
+find . -type f -newermt "-10 minutes" 
+find . -type f -newermt "1 day ago" 
+find . -type f -newermt "yesterday"
+
+find $1 -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head
+find $1 -type f -print0 | xargs -0 stat --format '%Y :%y %n' | sort -nr | cut -d: -f2- | head
+
+```
+> https://www.baeldung.com/linux/recently-changed-files
+
 # n98-magerun2
 
 > https://github.com/netz98/n98-magerun2
