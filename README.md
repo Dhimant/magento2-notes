@@ -84,7 +84,9 @@ find . -type f -newermt "yesterday"
 
 find $1 -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head
 find $1 -type f -print0 | xargs -0 stat --format '%Y :%y %n' | sort -nr | cut -d: -f2- | head
+find . -type f -printf '%T@ %p\n' | sort -k1,1nr | head -5
 
+-5 means last 5 files
 ```
 > https://www.baeldung.com/linux/recently-changed-files
 
