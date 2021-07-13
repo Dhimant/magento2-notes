@@ -94,6 +94,16 @@ find . -type f -printf '%T@ %p\n' | sort -k1,1nr | head -5
 
 > https://github.com/netz98/n98-magerun2
 
+# SQL Queries
+```
+SELECT `entity_id`,`customer_email`, `is_active`, count(*) as qty FROM quote GROUP BY `customer_email`, `is_active` HAVING count(*)> 1
+SELECT `entity_id`,`customer_email`, `is_active`, count(*) as qty FROM quote where is_active=1 and store_id=1 GROUP BY `customer_email`, `is_active` HAVING count(*)> 1 
+
+SELECT * FROM `quote` WHERE `customer_email` IS NULL
+SELECT * FROM `quote` WHERE `is_active` = 1 AND `customer_email` LIKE '%hamda.ali77@hotmail.com%'
+
+```
+
 # magento2-issues
 
 1. Not able to see custom category image in admin.
